@@ -1,0 +1,63 @@
+﻿@page "/mago"
+
+@using ParcialRPG.Models
+@using ParcialRPG.Data
+
+<h3>Registrar Mago</h3>
+
+<EditForm Model="mago" OnValidSubmit="Guardar">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-2">
+        <label>Nombre:</label>
+        <InputText @bind-Value="mago.Nombre" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label>Nivel:</label>
+        <InputNumber @bind-Value="mago.Nivel" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label>PV:</label>
+        <InputNumber @bind-Value="mago.PV" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label>XP:</label>
+        <InputNumber @bind-Value="mago.XP" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label>Escuela de magia:</label>
+
+        <InputSelect @bind-Value="mago.EscuelaMagia" class="form-control">
+            <option value="">Seleccione</option>
+            <option>Fuego</option>
+            <option>Hielo</option>
+            <option>Oscuridad</option>
+            
+        </InputSelect>
+    </div>
+
+    <div class="mb-2">
+        <label>Mana:</label>
+        <InputNumber @bind-Value="mago.Mana" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary">Guardar</button>
+
+</EditForm>
+
+@code {
+
+    Mago mago = new Mago();
+
+    void Guardar()
+    {
+        JuegoData.Personajes.Add(mago);
+
+        mago = new Mago();
+    }
+}

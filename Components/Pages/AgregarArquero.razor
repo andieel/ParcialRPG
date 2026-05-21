@@ -1,0 +1,63 @@
+﻿@page "/arquero"
+
+@using ParcialRPG.Models
+@using ParcialRPG.Data
+
+<h3>Registrar Arquero</h3>
+
+<EditForm Model="arquero" OnValidSubmit="Guardar">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-2">
+        <label>Nombre:</label>
+        <InputText @bind-Value="arquero.Nombre" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label>Nivel:</label>
+        <InputNumber @bind-Value="arquero.Nivel" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label>PV:</label>
+        <InputNumber @bind-Value="arquero.PV" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label>XP:</label>
+        <InputNumber @bind-Value="arquero.XP" class="form-control" />
+    </div>
+
+    <div class="mb-2">
+        <label>Tipo de arco:</label>
+
+        <InputSelect @bind-Value="arquero.TipoArco" class="form-control">
+            <option value="">Seleccione</option>
+            <option>Compuesto</option>
+            <option>Largo</option>
+            <option>Recurvo</option>
+            <option>Ballesta</option>
+        </InputSelect>
+    </div>
+
+    <div class="mb-2">
+        <label>Precision:</label>
+        <InputNumber @bind-Value="arquero.Precision" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary">Guardar</button>
+
+</EditForm>
+
+@code {
+
+    Arquero arquero = new Arquero();
+
+    void Guardar()
+    {
+        JuegoData.Personajes.Add(arquero);
+
+        arquero = new Arquero();
+    }
+}

@@ -1,0 +1,36 @@
+﻿@page "/lista"
+
+@using ParcialRPG.Data
+
+<h3>Listado de Personajes</h3>
+
+<h5>Total personajes: @JuegoData.Personajes.Count</h5>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Nivel</th>
+            <th>PV</th>
+            <th>XP</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        @foreach (var personaje in JuegoData.Personajes)
+        {
+            <tr>
+                <td>@personaje.Nombre</td>
+                <td>@personaje.Nivel</td>
+                <td>@personaje.PV</td>
+                <td>@personaje.XP</td>
+                <td>@personaje.GetType().Name</td>
+            </tr>
+        }
+
+    </tbody>
+
+</table>
