@@ -56,8 +56,12 @@
 
     void Guardar()
     {
+        arquero.Tipo = "Arquero";
+
         JuegoData.Personajes.Add(arquero);
 
+        JuegoData.GuardarJson();
+        
         arquero = new Arquero();
     }
 }

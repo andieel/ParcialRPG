@@ -56,8 +56,12 @@
 
     void Guardar()
     {
+        guerrero.Tipo = "Guerrero";
+
         JuegoData.Personajes.Add(guerrero);
 
+        JuegoData.GuardarJson();
+        
         guerrero = new Guerrero();
     }
 }

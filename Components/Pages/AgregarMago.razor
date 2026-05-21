@@ -56,7 +56,11 @@
 
     void Guardar()
     {
+        mago.Tipo = "Mago";
+
         JuegoData.Personajes.Add(mago);
+
+        JuegoData.GuardarJson();
 
         mago = new Mago();
     }

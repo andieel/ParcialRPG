@@ -7,47 +7,55 @@
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav flex-column">
+
+    <nav class="flex-column">
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+                <span class="bi bi-house-door-fill-nav-menu"></span> Home
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
+                <span class="bi bi-plus-square-fill-nav-menu"></span> Counter
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink href="guerrero">
-                Guerrero
+                <span class="bi bi-list-nested-nav-menu"></span> Weather
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
-            <NavLink href="mago">
-                Mago
+            <h6 class="text-white mt-3">PERSONAJES</h6>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="guerrero">
+                Registrar Guerrero
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
-            <NavLink href="arquero">
-                Arquero
+            <NavLink class="nav-link" href="mago">
+                Registrar Mago
             </NavLink>
         </div>
 
         <div class="nav-item px-3">
-            <NavLink href="lista">
-                Lista
+            <NavLink class="nav-link" href="arquero">
+                Registrar Arquero
             </NavLink>
         </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="lista">
+                Lista de Personajes
+            </NavLink>
+        </div>
+
     </nav>
-</div>
 
+</div>

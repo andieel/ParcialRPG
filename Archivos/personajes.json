@@ -1,0 +1,30 @@
+[
+  {
+    "Tipo": "Guerrero",
+    "Nombre": "Thor",
+    "Nivel": 78,
+    "PV": 450,
+    "XP": 9870
+  },
+  {
+    "Tipo": "Mago",
+    "Nombre": "Merlin",
+    "Nivel": 67,
+    "PV": 987,
+    "XP": 1487
+  },
+  {
+    "Tipo": "Arquero",
+    "Nombre": "Clint Barton",
+    "Nivel": 99,
+    "PV": 365,
+    "XP": 1825
+  },
+  {
+    "Tipo": "Guerrero",
+    "Nombre": "Odin",
+    "Nivel": 75,
+    "PV": 470,
+    "XP": 960
+  }
+]

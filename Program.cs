@@ -1,4 +1,5 @@
 using ParcialRPG.Components;
+using ParcialRPG.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,5 +20,5 @@ app.UseAntiforgery();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
-
+JuegoData.CargarJson();
 app.Run();
